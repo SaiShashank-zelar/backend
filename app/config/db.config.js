@@ -1,5 +1,6 @@
 //const env = require('./env.js');
 require('dotenv').config();
+const host = {host: process.env.host}
  
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize(process.env.database, process.env.username, process.env.password, {

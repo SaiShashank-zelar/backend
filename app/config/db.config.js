@@ -2,16 +2,16 @@
 require('dotenv').config();
  
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize(process.env.database, process.env.username, process.env.password, {
-  host: 'postgres',
-  dialect: 'postgres',
+const sequelize = new Sequelize(env.database, env.username, env.password, {
+  host: env.host,
+  dialect: env.dialect,
   operatorsAliases: false,
  
   pool: {
-    max: 5,
-    min: 0,
-    acquire: 30000,
-    idle: 10000
+    max: env.max,
+    min: env.min,
+    acquire: env.acquire,
+    idle: env.idle
   }
 });
 const db = {};

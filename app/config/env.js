@@ -2,7 +2,7 @@ const env = {
   database=$DATABASE_DB,
   username=$DATABASE_USER,
   password=$DATABASE_PASS,
-  host=$DATABASE_HOST},
+  host=$DATABASE_HOST,
   dialect: 'postgres',
   pool: {
     max: 5,
